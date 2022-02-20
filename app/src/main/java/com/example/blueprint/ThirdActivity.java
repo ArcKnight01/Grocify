@@ -30,11 +30,11 @@ public class ThirdActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_third);
 
-        // declaring a RecyclerView and initializing its Adapter and LayoutManager
-        RecyclerView foodList = findViewById(R.id.foodList);
-        FoodListAdapter adapter = new FoodListAdapter(this);
-        foodList.setLayoutManager(new LinearLayoutManager(this));
-        foodList.setAdapter(adapter);
+//        // declaring a RecyclerView and initializing its Adapter and LayoutManager
+//        RecyclerView foodList = findViewById(R.id.foodList);
+//        FoodListAdapter adapter = new FoodListAdapter(this);
+//        foodList.setLayoutManager(new LinearLayoutManager(this));
+//        foodList.setAdapter(adapter);
 
         Button backButton2 = findViewById(R.id.backButton2);
 
