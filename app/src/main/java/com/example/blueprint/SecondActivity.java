@@ -111,7 +111,7 @@ public class SecondActivity extends AppCompatActivity {
                         String input = editText.getText().toString().toLowerCase();
 
                         if(itemList.contains(input.toLowerCase())){
-//                            displayText.setText(input);
+                            displayText.setText("we have found the item, " + input + ".");
                             shoppingList.add(input);
                         }else{
                             displayText.setText("Sorry, the item you are looking for does not exist at this moment. We apologize for the hassle.");
@@ -120,8 +120,9 @@ public class SecondActivity extends AppCompatActivity {
                 });
 
                 StringBuilder str = new StringBuilder();
+
                 for (String item : shoppingList){
-                    str.append(item + ", ");
+                    str.append(item + ", \n");
                 }
                 displayText.setText(str);
 
