@@ -5,10 +5,17 @@
       <map>
         <entry key="..\:/Users/arcar/AndroidStudioProjects/Blueprint/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/arcar/AndroidStudioProjects/Blueprint/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/arcar/AndroidStudioProjects/Blueprint/app/src/main/res/layout/activity_food_item.xml1.xsd" value="0.18072916666666666" />
+        <entry key="..\:/Users/arcar/AndroidStudioProjects/Blueprint/app/src/main/res/layout/activity_food_item.xml2.xsd" value="0.18072916666666666" />
+        <entry key="..\:/Users/arcar/AndroidStudioProjects/Blueprint/app/src/main/res/layout/activity_food_item.xsd" value="0.13722826086956522" />
         <entry key="..\:/Users/arcar/AndroidStudioProjects/Blueprint/app/src/main/res/layout/activity_main.xml" value="0.23783783783783785" />
+        <entry key="..\:/Users/arcar/AndroidStudioProjects/Blueprint/app/src/main/res/layout/activity_map.xml" value="0.33061594202898553" />
         <entry key="..\:/Users/arcar/AndroidStudioProjects/Blueprint/app/src/main/res/layout/activity_second.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/arcar/AndroidStudioProjects/Blueprint/app/src/main/res/layout/activity_second2.xml" value="0.17806484295845998" />
         <entry key="..\:/Users/arcar/AndroidStudioProjects/Blueprint/app/src/main/res/layout/activity_third.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/arcar/AndroidStudioProjects/Blueprint/app/src/main/res/layout/item_food_list.xml" value="0.33" />
+        <entry key="..\:/Users/arcar/AndroidStudioProjects/Blueprint/app/src/main/res/layout/orange.xml" value="0.2758152173913043" />
+        <entry key="..\:/Users/arcar/AndroidStudioProjects/Blueprint/app/src/main/res/layout/recycler_view_item.xml" value="0.18072916666666666" />
         <entry key="..\:/Users/arcar/AndroidStudioProjects/Blueprint/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
       </map>
     </option>

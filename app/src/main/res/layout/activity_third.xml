@@ -19,8 +19,8 @@
 
     <TextView
         android:id="@+id/aboutText"
-        android:layout_width="198dp"
-        android:layout_height="350dp"
+        android:layout_width="90dp"
+        android:layout_height="619dp"
         android:text="ABOUT:\nFor making grocery shopping faster and easier\nTo use, first, enter items into search bar and select items wanted,\n \nThen, watch the magic happen as the app maps the quickest route to get all your items through the maze that is the grocery store..."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,4 +28,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.443" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/foodList"
+        android:layout_width="200dp"
+        android:layout_height="530dp"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="50dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
