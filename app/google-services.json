@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "76201637131",
+    "project_id": "grocify-51f78",
+    "storage_bucket": "grocify-51f78.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:76201637131:android:8deec203dcfb3f316c9e0e",
+        "android_client_info": {
+          "package_name": "com.example.blueprint"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "76201637131-5386t1mhu08mvdb3vh3k10od55nbelo3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDer4DUn4Z-nLDXdbsMMsktvurt_QKulDs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "76201637131-5386t1mhu08mvdb3vh3k10od55nbelo3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
