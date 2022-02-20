@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        TextView grocifyTitle = findViewById(R.id.textView6);
+        TextView grocifyTitle = findViewById(R.id.grocifyTitle);
         final int[] clicks = {0};
         Button shopButton = findViewById(R.id.shopButton);
         Button aboutButton = findViewById(R.id.aboutButton);
@@ -80,6 +80,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
         //        TextView myText1 = findViewById(R.id.myText1);
 //        TextView myText2 = findViewById(R.id.myText2);
 //        Switch switch1 = findViewById(R.id.switch1);
