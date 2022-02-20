@@ -1,5 +1,6 @@
 package com.example.blueprint;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,12 +9,49 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.database.annotations.NotNull;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
+    public static double[][] layout = {};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //double[][] layout1 = {{28.0, 6.0, 40.0, 34.0}, {6.0, 32.0, 34.0, 28.0},
+        //        {40.0, 34.0, 24.0, 16.0}, {34.0, 28.0, 16.0, 12.0}};
+
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference("StoreLayouts");
+
+        /*try {
+            ref.child("layout1").setValue(ObjectSerializer.serialize(layout1));
+        } catch (IOException e){
+            e.printStackTrace();
+        }*/
+
+        ref.child("layout1").addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull @NotNull DataSnapshot snapshot) {
+                if(snapshot.exists() && snapshot.getValue() != null){
+                    layout = (double[][]) ObjectSerializer.deserialize(snapshot.getValue().toString());
+                    assert layout != null;
+                    printArr(layout);
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull @NotNull DatabaseError error) {
+                System.out.println("DATABASE ERROR: " + error.getMessage());
+            }
+        });
 
 
         TextView grocifyTitle = findViewById(R.id.textView6);
@@ -119,6 +157,23 @@ public class MainActivity extends AppCompatActivity {
 //                myText1.setText("Hello, " + name + "!");
 //            }
 //        });
+    }
+
+    private void printArr(double[][] arr) {
+        System.out.print("[ ");
+        for(int i = 0; i < arr.length; i++){
+            System.out.print(i == 0 ? "[" : "  [");
+            for(int j = 0; j < arr[i].length; j++){
+                System.out.print(arr[i][j] + (j == arr[i].length - 1 ? "" : ", "));
+            }
+            System.out.print("]" + (i < arr.length - 1 ? "," : ""));
+
+            if(i < arr.length - 1){
+                System.out.println();
+            }
+        }
+        System.out.print(" ]");
+        System.out.println();
     }
 }
 
