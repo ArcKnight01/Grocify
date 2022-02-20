@@ -89,6 +89,7 @@
         android:id="@+id/foodList"
         android:layout_width="337dp"
         android:layout_height="83dp"
+        android:scrollbars="horizontal|vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

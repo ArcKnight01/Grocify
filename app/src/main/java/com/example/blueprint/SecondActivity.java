@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.Locale;
 
 public class SecondActivity extends AppCompatActivity {
-
+    public static ArrayList<String> shoppingList = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,16 +53,7 @@ public class SecondActivity extends AppCompatActivity {
 
         Button nextButton = findViewById(R.id.nextButton);
 
-        nextButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-//                clicks[0]++;
-//                myText1.setText("I have clicked on the button " + clicks[0] + " times!");
 
-                Intent intent = new Intent(SecondActivity.this, MapActivity.class);
-                startActivity(intent);
-            }
-        });
         //number of items
         //which category the items are in...
 
@@ -84,7 +75,7 @@ public class SecondActivity extends AppCompatActivity {
         );
 
 
-        ArrayList<String> shoppingList = new ArrayList<>();
+
 
         ImageButton searchButton = findViewById(R.id.searchButton);
 
@@ -127,6 +118,18 @@ public class SecondActivity extends AppCompatActivity {
                 displayText.setText(str);
 
                 int length = shoppingList.size();
+                if (length !=  0){
+                    nextButton.setOnClickListener(new View.OnClickListener(){
+                        @Override
+                        public void onClick(View v){
+//                clicks[0]++;
+//                myText1.setText("I have clicked on the button " + clicks[0] + " times!");
+
+                            Intent intent = new Intent(SecondActivity.this, MapActivity.class);
+                            startActivity(intent);
+                        }
+                    });
+                }
 //                myText1.setText("Hello, " + name + "!");
             }
         });
