@@ -1,0 +1,76 @@
+import java.util.Scanner;
+class blueprint
+{
+   static int sum; static int seq[]; static int minsum; static int arr[][]; static int sseq[][]; static int c=0; static int n;
+   public static void main (String args[])
+   {
+        Scanner Sc = new Scanner(System.in);
+        arr = new int[3][3]; minsum = 0;
+        for(int i=0; i<3; i++)
+        {
+            for(int j=0; j<3; j++)
+            {
+                if((i-j)==0)
+                arr[i][j] = 0;
+                else
+                {
+                    System.out.println("Enter distance between " + (i+1) + " and " + (j+1));
+                    arr[i][j] = Sc.nextInt();
+                    minsum+=arr[i][j];
+                }
+            }
+        }
+        System.out.println("How many items do you want to purchase?");
+        n = Sc.nextInt(); int factorial = fact(n);
+        seq = new int[n]; sum=0; sseq = new int[factorial][n]; System.out.println(factorial + "+" + n);
+        for (int i=0; i<n; i++)
+        {
+            System.out.println("In which Category is item " + (i+1));
+            seq[i] = Sc.nextInt(); seq[i]--;
+        }
+        permute(seq);
+        System.out.println("Shortest Path Length " + minsum);
+        System.out.println("Shopping Sequence");
+        for(int i=0; i<factorial; i++)
+        if(sseq[i][n-1] == minsum)
+        for(int j=0; j<n; j++)
+        System.out.println("Category: " + (sseq[i][j] + 1));
+   }
+   public static int fact(int n)
+   {
+       if(n==0)
+       return 1;
+       else
+       return n*fact(--n);
+    }
+   public static void permute(int arr[])
+   {
+       permuteHelper(seq, 0);
+   }
+   public static void permuteHelper(int arr1[], int index)
+   {
+     if(index >= arr1.length - 1){ 
+        sum=0;
+        for(int i=0; i<arr1.length-1; i++)
+        {
+            sum+=arr[arr1[i]][arr1[i+1]];
+        }
+
+        if(sum<minsum)
+        minsum=sum;
+        sseq[c][0] = arr1[0];
+        sseq[c][1] = arr1[1];
+        sseq[c][2] = arr1[2];
+        sseq[c][n-1] = sum;
+     }
+     for(int i = index; i < arr1.length; i++){ 
+        int temp = arr1[index];
+        arr1[index] = arr1[i];
+        arr1[i] = temp;
+        permuteHelper(arr1, index+1);
+        temp = arr1[index];
+        arr1[index] = arr1[i];
+        arr1[i] = temp;
+     }
+   }
+}
